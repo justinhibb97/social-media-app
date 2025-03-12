@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "author": "John_Doe",
+    "text": "This is my first post!",
+    "timestamp": "2025-02-14 23:02:04"
+  },
+  {
+    "id": 2,
+    "author": "Jane_Smith",
+    "text": "Hello, world! Excited to be here.",
+    "timestamp": "2025-02-14 18:06:23"
+  },
+  {
+    "id": 3,
+    "author": "Alice_Johnson",
+    "text": "Loving this platform so far!",
+    "timestamp": "2025-02-14 14:10:42"
+  },
+  {
+    "id": 4,
+    "author": "Bob_Williams",
+    "text": "Just had an amazing day at the park.",
+    "timestamp": "2025-02-14 08:33:10"
+  },
+  {
+    "id": 5,
+    "author": "Charlie_Brown",
+    "text": "Anyone else excited for the weekend?",
+    "timestamp": "2025-02-14 04:43:06"
+  }
+]

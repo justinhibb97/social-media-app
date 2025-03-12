@@ -5,32 +5,36 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerLogo {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header > h3 {
+  text-align: left;
+  color: rgb(106, 255, 138);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 250px;
+}
+
+.header > h4 {
+  text-align: right;
+  margin: 0;
+}
+
+.header > h4 > span {
+  padding-left: 3px;
+  color: rgb(106, 255, 138);
+  cursor: pointer;
 }
 
 .card {
@@ -39,4 +43,134 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.likeCard {
+  display: flex;
+  justify-content: left;
+  padding-left: 0;
+  padding-top: 10px;
+}
+
+.postCard {
+  background-color: #1a1a1a;
+  /*border-radius: 25px;*/
+  width: 500px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  border-top: 2px solid #242424;
+}
+
+.nameCard {
+  background-color: #1a1a1a;
+  /*border-top-left-radius: 25px;
+  border-top-right-radius: 25px;*/
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding-left: 10px;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 15px;
+  height: 15px;
+  padding-bottom: 10px;
+}
+
+.nameCard > h3 {
+  font-weight: 400;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 5px;
+  color: rgb(106, 255, 138);
+}
+
+.nameCard > h4 {
+  font-weight: 400;
+  font-size: 0.75em;
+}
+
+.nameCard > p {
+  padding-top: 10px;
+}
+
+.profileLogo {
+  width: 25px;
+  height: 25px;
+}
+
+.likeOn {
+  /*background-color: rgb(106, 255, 138);*/
+  background-color: #242424;
+  color: rgb(106, 255, 138);
+  /*color: black;*/
+  width: 85px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+.likeOn:hover {
+  /*background-*/
+  color: rgb(0, 0, 0);
+  background-color: rgb(106, 255, 138);
+}
+
+.likeOff {
+  background-color: #242424;
+  width: 90px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+.likeOff:hover {
+  /*background-color: #000000;*/
+  color: rgb(0, 0, 0);
+  background-color: rgb(106, 255, 138);
+}
+
+.remove {
+  margin-left: 10px;
+  background-color: #242424;
+  width: 140px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+.remove:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(106, 255, 138);
+}
+
+.postText {
+  width: 500px;
+  height: 100px;
+  background-color: #242424;
+  /*background-color: #1a1a1a;*/
+  color: white;
+  border: none;
+  resize: none;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.submitPost {
+  width: 100px;
+  background-color: rgb(106, 255, 138);
+  border-radius: 25px;
+  box-sizing: border-box;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.submitPost:hover {
+  background-color: rgb(57, 255, 100);
 }

@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Post from "./Post.jsx";
+import CreatePost from "./CreatePost.jsx";
+import Data from "./data.json";
+import logo from "./reddit-logo-white.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [posts, setPosts] = useState(Data);
+
+  const generatePosts = () => {
+    return posts.map((post) => (
+      <div key={post.id}>
+        <Post
+          postInfo={{
+            ...post,
+            isLiked: post.isLiked || false,
+            isUser: post.isUser || false,
+          }}
+          removePost={removePost}
+        />
+      </div>
+    ));
+  };
+
+  const addPost = (newPost) => {
+    setPosts([newPost, ...posts]);
+  };
+
+  const removePost = (post) => {
+    setPosts(posts.filter((p) => p.id !== post.id));
+  };
 
   return (
     <>
+      <div className="header">
+        <img src={logo} className="headerLogo" />
+        <h3>Social City</h3>
+        <h4>
+          Welcome <span>Justin</span>
+        </h4>
+      </div>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h2>Create Post</h2>
+        <CreatePost addPost={addPost} />
+        <h2>Recent Posts</h2>
+        {generatePosts()}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
