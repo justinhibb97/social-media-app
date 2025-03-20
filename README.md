@@ -1,4 +1,5 @@
 # Social Media App built with React
+A small demo of a user facing social media app with posts, publishing, removing and interacting with posts.
 <img width="552" alt="Screenshot 2025-03-11 at 10 03 10 PM" src="https://github.com/user-attachments/assets/ab6423f8-ba0a-4ea6-a7ee-5b7c1e3dddf9" />
 
 ## Create Posts and Publish them
